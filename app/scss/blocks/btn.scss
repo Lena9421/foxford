@@ -1,0 +1,17 @@
+.btn {
+  width: 280px;
+  height: 55px;
+  background-color: #ececf1;
+  color: black;
+  border-radius: 18px;
+  font-size: 28px;
+  line-height: 30px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  color: #a1a1a7;
+}
+

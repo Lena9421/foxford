@@ -1,0 +1,107 @@
+.user-info {
+  min-height: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &--year,
+  &--month,
+  &--day,
+  &--status,
+  &--edu    {
+    height: 18px;
+    background-color: #f6f6f6;
+    border-color: #9c8d8d;
+    background-image: linear-gradient(to top, #f6f6f6, #fff);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+  &--year,
+  &--month,
+  &--day  {
+    margin-right: 5px;
+  }
+  &--status {
+    width: 160px;
+    cursor: pointer;
+  }
+}
+
+.user-info__application-title {
+  height: 40px;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  margin-right: 250px;
+}
+
+.user-info__form {
+  width: 640px;
+  height: auto;
+  padding-top: 30px;
+  background-color: #ecd2d1;
+  background-image: linear-gradient(to bottom, #ecd2d1, #fff);
+  font-size: 12px;
+  font-weight: bolder;
+
+}
+
+.user-info__fieldset {
+  min-height: 240px;
+  width: 100%;
+  border: none;
+  margin-left: 0;
+  padding-top: 0;
+  padding-left: 20px;
+  &--name {
+    height: auto;
+  }
+}
+
+.user-info__block {
+  width: 480px;
+  display: flex;
+  margin-bottom: 20px;
+  &--confirm {
+    width: 348px;
+    margin: 20px 0 20px 180px;
+  }
+  &--birthday {
+  height: auto;
+  }
+}
+.user-info__col {
+  width: 160px;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  &--birthday {
+    width: 170px;
+  }
+}
+
+
+.user-info__title{
+  width: 150px;
+  margin-right: 0;
+}
+.user-info__header {
+  font-size: 24px;
+  font-weight: bold;
+  width: 47%;
+  padding-left: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.user-info__important {
+  width: 320px;
+  height: 55px;
+  margin: 10px auto;
+  padding: 8px 0 0 8px;
+  background-color: #ffdddd;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, .2);
+}
