@@ -11,6 +11,7 @@ var rename = require("gulp-rename");
 var imagemin = require('gulp-imagemin');
 var minify = require("gulp-csso");
 var mqpacker = require('css-mqpacker');
+var deploy      = require('gulp-gh-pages');
 
 gulp.task('style', function () {
     return gulp.src('app/scss/style.scss')
@@ -84,6 +85,13 @@ gulp.task('build', function (fn) {
         'images',
         fn
     );
+});
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });
 
 gulp.task('serve', function () {
