@@ -11,7 +11,7 @@ var rename = require("gulp-rename");
 var imagemin = require('gulp-imagemin');
 var minify = require("gulp-csso");
 var mqpacker = require('css-mqpacker');
-var deploy      = require('gulp-gh-pages');
+var deploy = require('gulp-gh-pages');
 
 gulp.task('style', function () {
     return gulp.src('app/scss/style.scss')
@@ -35,17 +35,17 @@ gulp.task("html", function () {
     gulp.src("*.html")
         .pipe(gulp.dest("build/"));
 });
-gulp.task("html:copy", function() {
+gulp.task("html:copy", function () {
     return gulp.src('./app/*.html')
         .pipe(gulp.dest("build"))
 });
 
-gulp.task("html:update", ["html:copy"], function(done) {
+gulp.task("html:update", ["html:copy"], function (done) {
     browserSync.reload();
     done();
 });
 
-gulp.task('js:copy', function() {
+gulp.task('js:copy', function () {
     return gulp.src(['app/js/*.js'], {
         base: './app'
     })
@@ -90,8 +90,8 @@ gulp.task('build', function (fn) {
  * Push build to gh-pages
  */
 gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
+    return gulp.src("./dist/**/*")
+        .pipe(deploy())
 });
 
 gulp.task('serve', function () {
